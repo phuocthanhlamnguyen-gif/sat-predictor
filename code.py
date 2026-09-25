@@ -5,9 +5,9 @@ import sys
 
 # Check for the OS compatability
 if sys.platform.startswith('win'):
-    bin = "./mathlib.dll"
+    bin = "./binary/mathlib.dll"
 elif sys.platform.startswith('linux'):
-    bin = './mathlib.so'
+    bin = './binary/mathlib.so'
 else:
     print("Unsupported")
     exit(1)
