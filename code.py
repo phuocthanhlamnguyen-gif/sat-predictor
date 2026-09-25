@@ -1,8 +1,34 @@
+import ctypes
+import numpy as np
 from skyfield.api import Loader, load
-import math
+import sys
 
-mu = 398600.44  # Gravitational parameter for Earth in km^3/s^2
+# Check for the OS compatability
+if sys.platform.startswith('win'):
+    bin = "./mathlib.dll"
+elif sys.platform.startswith('linux'):
+    bin = './mathlib.so'
+else:
+    print("Unsupported")
+    exit(1)
 
+# Load the binary
+lib = ctypes.CDLL(bin)
+
+# Get all the C stuff to support python basic stuff
+lib.pre_orb.argtypes = [
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS'),
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS'),
+    ctypes.c_double,
+    ctypes.c_double,
+]
+
+lib.print_output.argtypes = [
+    np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS'),
+    ctypes.c_int,
+]
+
+# To load to start the skyfield
 load_file = Loader('~/skyfield-data')
 ts = load_file.timescale()
 
@@ -11,24 +37,17 @@ stations_url = (
 )
 satellites = load.tle_file(stations_url)
 iss = satellites[0]
+
 t = ts.now()
 geocentric = iss.at(t)
 
-position = list(geocentric.position.km)
-velocity = list(geocentric.velocity.km_per_s)
+position = np.array(geocentric.position.km, dtype=np.float64)
+velocity = np.array(geocentric.velocity.km_per_s, dtype=np.float64)
+mu = 398600.44
+dt = 10
 
-# Time step in seconds
-dt = 5
+for step in range(10):
+    lib.pre_orb(position, velocity, mu, dt)
+    lib.print_output(position, step + 1)
 
-for step in range(5):  
-    # 1. Calculate total distance magnitude (r) from Earth's center
-    r = math.sqrt(position[0]**2 + position[1]**2 + position[2]**2)
-
-    # 2. Calculate 3D acceleration vector components (a = -mu / r^3 * position)
-    acc = [0, 0, 0]
-    for i in range(3):
-        acc[i] = -(mu / r**3) * position[i]
-        velocity[i] += acc[i] * dt
-        position[i] += velocity[i] * dt
-
-    print(f"Step {step+1} -> New Position (X, Y, Z): {position[0]:.2f}, {position[1]:.2f}, {position[2]:.2f} km")
+input()
