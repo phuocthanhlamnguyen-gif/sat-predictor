@@ -21,5 +21,5 @@ EXPORT void pre_orb(double pos[3], double vel[3], double mu, double dt) {
 }
 
 EXPORT void print_output(double pos[3], int step) {
-    printf("Step %d -> Position (X, Y, Z): %.2f, %.2f, %.2f km\n", step, pos[0], pos[1], pos[2]);
+    printf("Ship: ISS, Step %d -> Position (X, Y, Z): %.2f, %.2f, %.2f km\n", step, pos[0], pos[1], pos[2]);
 }
