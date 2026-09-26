@@ -23,7 +23,7 @@ package:
 	# (Optional: include binary/ in tar by removing '--exclude=binary' if you want it packaged)
 
 clean:
-	rm -rf venv binary package
+	rm -rf venv binary package venv
 
 install: 
 	python3 -m venv venv
