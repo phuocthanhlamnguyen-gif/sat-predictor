@@ -2,6 +2,7 @@ import ctypes
 import sys
 import numpy as np
 from skyfield.api import Loader, load
+import json
 
 # Check for OS compatibility and load binary
 if sys.platform.startswith('win'):
@@ -44,17 +45,17 @@ position = np.array(geocentric.position.km, dtype=np.float64)
 velocity = np.array(geocentric.velocity.km_per_s, dtype=np.float64)
 mu = 398600.44
 
+# Open json
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
+
 # Get time-step dynamically from user input
-try:
-    dt = float(input('Enter time step dt (seconds, e.g., 10): ') or 10.0)
-except ValueError:
-    dt = 10.0
-    print('Invalid input, defaulting dt to 10.0 seconds.')
+dt = config['time_stamp']
+max_step = config['step_max']
 
 print('\n--- Starting Simulation Loop ---')
-for step in range(10):
+for step in range(max_step):
     lib.pre_orb(position, velocity, mu, dt)
     lib.print_output(position, step + 1)
-
-print('\nSimulation complete. Press Enter to exit.')
-input()
+    pass

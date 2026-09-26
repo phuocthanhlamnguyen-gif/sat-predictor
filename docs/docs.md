@@ -64,5 +64,15 @@ but you also must **follow the LICENSE**. But hwere's the other rules in this re
  * No swearing or making fun of others
  * Don't add ransomware or viruses in here
 
+## JSON changes
+If you want to modify the JSON in the code, you may but you must
+know what data is. Becuase JSON don't support comments but only data, 
+I may need to do this way.
+
+But here's the graph:
+| Data function | What they do | 
+| ----- | --- | 
+| "time_stamp" | How much time will pass | 
+| "step_max" | How much step we'll count to | 
 
 And now you can contribute!
