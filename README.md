@@ -1,4 +1,4 @@
-# README.md
+# README
 
 Welcome to my project, and this is a way to **predict the position of satellite**. Mainly `earth` satellite, 
 but I'll add deep-space satellite in the future. And I made this project becuase of my *interest in rocket science*.
