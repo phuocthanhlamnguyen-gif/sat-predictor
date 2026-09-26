@@ -70,9 +70,9 @@ know what data is. Becuase JSON don't support comments but only data,
 I may need to do this way.
 
 But here's the graph:
-| Data function | What they do | 
+| Data function | What they do | unit |
 | ----- | --- | 
-| "time_stamp" | How much time will pass | 
-| "step_max" | How much step we'll count to | 
+| "time_stamp" | How much time will pass | decimal accepted |
+| "step_max" | How much step we'll count to | only integer |
 
 And now you can contribute!

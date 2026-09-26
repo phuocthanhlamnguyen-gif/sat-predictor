@@ -9,8 +9,12 @@
     #define EXPORT
 #endif
 
+double power_of_2(double a){
+    return a * a; 
+}
+
 EXPORT void pre_orb(double pos[3], double vel[3], double mu, double dt) {
-    double r = sqrt(pos[0]*pos[0] + pos[1]*pos[1] + pos[2]*pos[2]);
+    double r = sqrt(power_of_2(pos[0]) + power_of_2(pos[1]) + power_of_2(pos[2]));
     double r3 = r * r * r;
 
     for (int i = 0; i < 3; i++) {
