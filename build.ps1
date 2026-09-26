@@ -1,4 +1,4 @@
-Write-Host "Building code!" -ForegroundColor Green
-gcc -shared -o binary/mathlib.dll main.c -lm
-Write-Host "Done building code, now start running!" -ForegroundColor Green
+Write-Host "Building code..."
+gcc -shared -o mathlib.dll main.c -lm 
+Write-Host "Done building, now running..."
 ./code.py

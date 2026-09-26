@@ -1,21 +1,20 @@
 import ctypes
+import sys
 import numpy as np
 from skyfield.api import Loader, load
-import sys
 
-# Check for the OS compatability
+# Check for OS compatibility and load binary
 if sys.platform.startswith('win'):
-    bin = "./binary/mathlib.dll"
+    bin_path = './binary/mathlib.dll'
 elif sys.platform.startswith('linux'):
-    bin = './binary/mathlib.so'
+    bin_path = './binary/mathlib.so'
 else:
-    print("Unsupported")
-    exit(1)
+    print('Unsupported operating system!')
+    sys.exit(1)
 
-# Load the binary
-lib = ctypes.CDLL(bin)
+lib = ctypes.CDLL(bin_path)
 
-# Get all the C stuff to support python basic stuff
+# Define C function signatures for ctypes safety
 lib.pre_orb.argtypes = [
     np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS'),
     np.ctypeslib.ndpointer(dtype=np.float64, ndim=1, flags='C_CONTIGUOUS'),
@@ -28,7 +27,7 @@ lib.print_output.argtypes = [
     ctypes.c_int,
 ]
 
-# To load to start the skyfield
+# Initialize Skyfield timescale and satellite data
 load_file = Loader('~/skyfield-data')
 ts = load_file.timescale()
 
@@ -44,10 +43,18 @@ geocentric = iss.at(t)
 position = np.array(geocentric.position.km, dtype=np.float64)
 velocity = np.array(geocentric.velocity.km_per_s, dtype=np.float64)
 mu = 398600.44
-dt = 10
 
+# Get time-step dynamically from user input
+try:
+    dt = float(input('Enter time step dt (seconds, e.g., 10): ') or 10.0)
+except ValueError:
+    dt = 10.0
+    print('Invalid input, defaulting dt to 10.0 seconds.')
+
+print('\n--- Starting Simulation Loop ---')
 for step in range(10):
     lib.pre_orb(position, velocity, mu, dt)
     lib.print_output(position, step + 1)
 
+print('\nSimulation complete. Press Enter to exit.')
 input()
