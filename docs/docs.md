@@ -78,4 +78,16 @@ But here's the graph:
 | "velocity" | What is the velocity | decimal accepted |
 | "mu" | gravitational parameter | decimal accepted |
 
+## Report files
+So you got the report files now (or `report.sp`) which is where
+data is stored for future stuff, so to actully use it, you may need to copy the file.
+Or using this command:
+
+```bash
+cp report.sp reportcopy.sp # Can change the reportcopy.sp
+```
+
+So you can share it to anyone else. Which, it is a text file, thus
+you can change it to however you like.
+
 And now you can contribute!

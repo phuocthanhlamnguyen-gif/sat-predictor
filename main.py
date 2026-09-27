@@ -28,7 +28,7 @@ lib.print_output.argtypes = [
     ctypes.c_int,
 ]
 
-with open('config.json', 'r') as f:
+with open('config/config.json', 'r') as f:
     config = json.load(f)
 
 position = np.array(config['position'], dtype=np.float64)  
@@ -39,7 +39,8 @@ max_step = config['step_max']
 RE = config['Re']
 J2 = config['J2']
 
-print('\n--- Simulation ---')
+print('\n--- Simulation: v0.0.1-alpha ---')
+open("report.sp", "w").close()
 for step in range(max_step):
     lib.pre_orb(position, velocity, mu, dt, RE, J2)
     lib.print_output(position, step + 1)

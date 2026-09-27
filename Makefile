@@ -10,6 +10,7 @@ PYTOOLS = numpy
 all: $(BIN)
 
 $(BIN): $(FILE)
+	touch report.sp
 	mkdir -p binary
 	$(CC) -shared -o $(BIN) $(FILE) -lm
 
@@ -23,7 +24,7 @@ package:
 	# (Optional: include binary/ in tar by removing '--exclude=binary' if you want it packaged)
 
 clean:
-	rm -rf venv binary package venv
+	rm -rf venv binary package venv *.sp
 
 install: 
 	python3 -m venv venv

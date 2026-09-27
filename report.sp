@@ -1,14 +1,3 @@
-# The benchmark
-
-I think it's pretty fast, while not the most fast, but it's still fast 
-enough to be good, but here's the benchmarks, but it varies, for my test, it's around 400ms-100ms which
-is fast, but if you need very fast enterprise machine, this is not for you, still it's still good, but
-here's the benchmarks:
-
-```bash
-(venv) admin_123@DESKTOP-3OKNDEQ:/mnt/c/Users/Admin/space-tracker$ time python3 main.py
-
---- Simulation: v0.0.1-alpha ---
 Step 1 -> Position (X, Y, Z): 101000.00, 101000.00, 101000.00 km
 Step 2 -> Position (X, Y, Z): -251454728.51, -251454728.51, -262703172.69 km
 Step 3 -> Position (X, Y, Z): -503035494.25, -503035494.25, -525532382.72 km
@@ -109,22 +98,3 @@ Step 97 -> Position (X, Y, Z): -24151627473.30, -24151627473.30, -25231478125.04
 Step 98 -> Position (X, Y, Z): -24403208239.04, -24403208239.04, -25494307335.06 km
 Step 99 -> Position (X, Y, Z): -24654789004.77, -24654789004.77, -25757136545.09 km
 Step 100 -> Position (X, Y, Z): -24906369770.51, -24906369770.51, -26019965755.11 km
-
-real    0m0.267s
-user    0m1.094s
-sys     0m0.156s
-```
-
-And here's the json stats:
-
-```js
-{
-    "time_stamp": 100,
-    "step_max": 100,
-    "position": [1000, 1000, 1000],
-    "velocity": [1000, 1000, 1000],
-    "mu": 132712440018.9,
-    "Re": 6378.1,
-    "J2": 0.00108263
-}
-```
