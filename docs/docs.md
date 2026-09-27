@@ -22,7 +22,7 @@ git push
 And now, **send the PR**!
 
 ## Tools you need:
- * Python (and tools like numpy and skyfield)
+ * Python (and tools like numpy)
  * C programming language
  * Make for compiling code (or if you're on Windows skip this as you have `build.ps1`)
  * GDB (or debugging tools) to debug code
@@ -71,8 +71,11 @@ I may need to do this way.
 
 But here's the graph:
 | Data function | What they do | unit |
-| ----- | --- | 
+| ----- | --- | --- |
 | "time_stamp" | How much time will pass | decimal accepted |
 | "step_max" | How much step we'll count to | only integer |
+| "position" | What is the current posititon | decimal accepted |
+| "velocity" | What is the velocity | decimal accepted |
+| "mu" | gravitational parameter | decimal accepted |
 
 And now you can contribute!

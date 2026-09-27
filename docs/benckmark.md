@@ -1,75 +1,130 @@
 # The benchmark
 
-I think it's pretty fast, while not the fastest ever (maybe because of the python code), but it's still fast 
+I think it's pretty fast, while not the most fast, but it's still fast 
 enough to be good, but here's the benchmarks, but it varies, for my test, it's around 400ms-100ms which
 is fast, but if you need very fast enterprise machine, this is not for you, still it's still good, but
 here's the benchmarks:
 
 ```bash
-(venv) admin_123@DESKTOP-3OKNDEQ:/mnt/c/Users/Admin/space-tracker$ time python3 code.py
+(venv) admin_123@DESKTOP-3OKNDEQ:/mnt/c/Users/Admin/space-tracker$ time python3 main.py
 
---- Starting Simulation Loop ---
-Ship: ISS, Step 1 -> Position (X, Y, Z): 4291.19, -4327.73, 2996.11 km
-Ship: ISS, Step 2 -> Position (X, Y, Z): 4291.24, -4327.71, 2996.06 km
-Ship: ISS, Step 3 -> Position (X, Y, Z): 4291.30, -4327.69, 2996.01 km
-Ship: ISS, Step 4 -> Position (X, Y, Z): 4291.35, -4327.67, 2995.96 km
-Ship: ISS, Step 5 -> Position (X, Y, Z): 4291.41, -4327.65, 2995.91 km
-Ship: ISS, Step 6 -> Position (X, Y, Z): 4291.46, -4327.63, 2995.86 km
-Ship: ISS, Step 7 -> Position (X, Y, Z): 4291.51, -4327.61, 2995.81 km
-Ship: ISS, Step 8 -> Position (X, Y, Z): 4291.57, -4327.59, 2995.76 km
-Ship: ISS, Step 9 -> Position (X, Y, Z): 4291.62, -4327.57, 2995.71 km
-Ship: ISS, Step 10 -> Position (X, Y, Z): 4291.68, -4327.55, 2995.66 km
-Ship: ISS, Step 11 -> Position (X, Y, Z): 4291.73, -4327.53, 2995.61 km
-Ship: ISS, Step 12 -> Position (X, Y, Z): 4291.79, -4327.51, 2995.56 km
-Ship: ISS, Step 13 -> Position (X, Y, Z): 4291.84, -4327.49, 2995.51 km
-Ship: ISS, Step 14 -> Position (X, Y, Z): 4291.90, -4327.47, 2995.46 km
-Ship: ISS, Step 15 -> Position (X, Y, Z): 4291.95, -4327.45, 2995.41 km
-Ship: ISS, Step 16 -> Position (X, Y, Z): 4292.01, -4327.43, 2995.36 km
-Ship: ISS, Step 17 -> Position (X, Y, Z): 4292.06, -4327.41, 2995.31 km
-Ship: ISS, Step 18 -> Position (X, Y, Z): 4292.12, -4327.39, 2995.26 km
-Ship: ISS, Step 19 -> Position (X, Y, Z): 4292.17, -4327.37, 2995.21 km
-Ship: ISS, Step 20 -> Position (X, Y, Z): 4292.23, -4327.35, 2995.16 km
-Ship: ISS, Step 21 -> Position (X, Y, Z): 4292.28, -4327.33, 2995.11 km
-Ship: ISS, Step 22 -> Position (X, Y, Z): 4292.34, -4327.31, 2995.06 km
-Ship: ISS, Step 23 -> Position (X, Y, Z): 4292.39, -4327.29, 2995.01 km
-Ship: ISS, Step 24 -> Position (X, Y, Z): 4292.45, -4327.27, 2994.96 km
-Ship: ISS, Step 25 -> Position (X, Y, Z): 4292.50, -4327.25, 2994.91 km
-Ship: ISS, Step 26 -> Position (X, Y, Z): 4292.56, -4327.23, 2994.86 km
-Ship: ISS, Step 27 -> Position (X, Y, Z): 4292.61, -4327.21, 2994.81 km
-Ship: ISS, Step 28 -> Position (X, Y, Z): 4292.67, -4327.19, 2994.76 km
-Ship: ISS, Step 29 -> Position (X, Y, Z): 4292.72, -4327.17, 2994.71 km
-Ship: ISS, Step 30 -> Position (X, Y, Z): 4292.78, -4327.15, 2994.66 km
-Ship: ISS, Step 31 -> Position (X, Y, Z): 4292.83, -4327.13, 2994.61 km
-Ship: ISS, Step 32 -> Position (X, Y, Z): 4292.89, -4327.11, 2994.56 km
-Ship: ISS, Step 33 -> Position (X, Y, Z): 4292.94, -4327.09, 2994.51 km
-Ship: ISS, Step 34 -> Position (X, Y, Z): 4293.00, -4327.07, 2994.46 km
-Ship: ISS, Step 35 -> Position (X, Y, Z): 4293.05, -4327.05, 2994.41 km
-Ship: ISS, Step 36 -> Position (X, Y, Z): 4293.11, -4327.03, 2994.37 km
-Ship: ISS, Step 37 -> Position (X, Y, Z): 4293.16, -4327.01, 2994.32 km
-Ship: ISS, Step 38 -> Position (X, Y, Z): 4293.21, -4326.99, 2994.27 km
-Ship: ISS, Step 39 -> Position (X, Y, Z): 4293.27, -4326.97, 2994.22 km
-Ship: ISS, Step 40 -> Position (X, Y, Z): 4293.32, -4326.95, 2994.17 km
-Ship: ISS, Step 41 -> Position (X, Y, Z): 4293.38, -4326.93, 2994.12 km
-Ship: ISS, Step 42 -> Position (X, Y, Z): 4293.43, -4326.91, 2994.07 km
-Ship: ISS, Step 43 -> Position (X, Y, Z): 4293.49, -4326.89, 2994.02 km
-Ship: ISS, Step 44 -> Position (X, Y, Z): 4293.54, -4326.87, 2993.97 km
-Ship: ISS, Step 45 -> Position (X, Y, Z): 4293.60, -4326.85, 2993.92 km
-Ship: ISS, Step 46 -> Position (X, Y, Z): 4293.65, -4326.83, 2993.87 km
-Ship: ISS, Step 47 -> Position (X, Y, Z): 4293.71, -4326.81, 2993.82 km
-Ship: ISS, Step 48 -> Position (X, Y, Z): 4293.76, -4326.79, 2993.77 km
-Ship: ISS, Step 49 -> Position (X, Y, Z): 4293.82, -4326.77, 2993.72 km
-Ship: ISS, Step 50 -> Position (X, Y, Z): 4293.87, -4326.75, 2993.67 km
+--- Simulation ---
+Step 1 -> Position (X, Y, Z): 101000.00, 101000.00, 101000.00 km
+Step 2 -> Position (X, Y, Z): -251454728.51, -251454728.51, -262703172.69 km
+Step 3 -> Position (X, Y, Z): -503035494.25, -503035494.25, -525532382.72 km
+Step 4 -> Position (X, Y, Z): -754616259.98, -754616259.98, -788361592.75 km
+Step 5 -> Position (X, Y, Z): -1006197025.72, -1006197025.72, -1051190802.77 km
+Step 6 -> Position (X, Y, Z): -1257777791.45, -1257777791.45, -1314020012.80 km
+Step 7 -> Position (X, Y, Z): -1509358557.19, -1509358557.19, -1576849222.82 km
+Step 8 -> Position (X, Y, Z): -1760939322.92, -1760939322.92, -1839678432.85 km
+Step 9 -> Position (X, Y, Z): -2012520088.66, -2012520088.66, -2102507642.87 km
+Step 10 -> Position (X, Y, Z): -2264100854.39, -2264100854.39, -2365336852.90 km
+Step 11 -> Position (X, Y, Z): -2515681620.13, -2515681620.13, -2628166062.92 km
+Step 12 -> Position (X, Y, Z): -2767262385.86, -2767262385.86, -2890995272.95 km
+Step 13 -> Position (X, Y, Z): -3018843151.60, -3018843151.60, -3153824482.97 km
+Step 14 -> Position (X, Y, Z): -3270423917.33, -3270423917.33, -3416653693.00 km
+Step 15 -> Position (X, Y, Z): -3522004683.07, -3522004683.07, -3679482903.02 km
+Step 16 -> Position (X, Y, Z): -3773585448.80, -3773585448.80, -3942312113.05 km
+Step 17 -> Position (X, Y, Z): -4025166214.54, -4025166214.54, -4205141323.07 km
+Step 18 -> Position (X, Y, Z): -4276746980.27, -4276746980.27, -4467970533.10 km
+Step 19 -> Position (X, Y, Z): -4528327746.01, -4528327746.01, -4730799743.12 km
+Step 20 -> Position (X, Y, Z): -4779908511.74, -4779908511.74, -4993628953.15 km
+Step 21 -> Position (X, Y, Z): -5031489277.48, -5031489277.48, -5256458163.17 km
+Step 22 -> Position (X, Y, Z): -5283070043.21, -5283070043.21, -5519287373.20 km
+Step 23 -> Position (X, Y, Z): -5534650808.95, -5534650808.95, -5782116583.22 km
+Step 24 -> Position (X, Y, Z): -5786231574.68, -5786231574.68, -6044945793.24 km
+Step 25 -> Position (X, Y, Z): -6037812340.42, -6037812340.42, -6307775003.27 km
+Step 26 -> Position (X, Y, Z): -6289393106.15, -6289393106.15, -6570604213.29 km
+Step 27 -> Position (X, Y, Z): -6540973871.88, -6540973871.88, -6833433423.32 km
+Step 28 -> Position (X, Y, Z): -6792554637.62, -6792554637.62, -7096262633.34 km
+Step 29 -> Position (X, Y, Z): -7044135403.35, -7044135403.35, -7359091843.37 km
+Step 30 -> Position (X, Y, Z): -7295716169.09, -7295716169.09, -7621921053.39 km
+Step 31 -> Position (X, Y, Z): -7547296934.82, -7547296934.82, -7884750263.42 km
+Step 32 -> Position (X, Y, Z): -7798877700.56, -7798877700.56, -8147579473.44 km
+Step 33 -> Position (X, Y, Z): -8050458466.29, -8050458466.29, -8410408683.47 km
+Step 34 -> Position (X, Y, Z): -8302039232.03, -8302039232.03, -8673237893.49 km
+Step 35 -> Position (X, Y, Z): -8553619997.76, -8553619997.76, -8936067103.52 km
+Step 36 -> Position (X, Y, Z): -8805200763.50, -8805200763.50, -9198896313.54 km
+Step 37 -> Position (X, Y, Z): -9056781529.23, -9056781529.23, -9461725523.56 km
+Step 38 -> Position (X, Y, Z): -9308362294.97, -9308362294.97, -9724554733.59 km
+Step 39 -> Position (X, Y, Z): -9559943060.70, -9559943060.70, -9987383943.61 km
+Step 40 -> Position (X, Y, Z): -9811523826.43, -9811523826.43, -10250213153.64 km
+Step 41 -> Position (X, Y, Z): -10063104592.17, -10063104592.17, -10513042363.66 km
+Step 42 -> Position (X, Y, Z): -10314685357.90, -10314685357.90, -10775871573.69 km
+Step 43 -> Position (X, Y, Z): -10566266123.64, -10566266123.64, -11038700783.71 km
+Step 44 -> Position (X, Y, Z): -10817846889.37, -10817846889.37, -11301529993.74 km
+Step 45 -> Position (X, Y, Z): -11069427655.11, -11069427655.11, -11564359203.76 km
+Step 46 -> Position (X, Y, Z): -11321008420.84, -11321008420.84, -11827188413.79 km
+Step 47 -> Position (X, Y, Z): -11572589186.58, -11572589186.58, -12090017623.81 km
+Step 48 -> Position (X, Y, Z): -11824169952.31, -11824169952.31, -12352846833.83 km
+Step 49 -> Position (X, Y, Z): -12075750718.05, -12075750718.05, -12615676043.86 km
+Step 50 -> Position (X, Y, Z): -12327331483.78, -12327331483.78, -12878505253.88 km
+Step 51 -> Position (X, Y, Z): -12578912249.51, -12578912249.51, -13141334463.91 km
+Step 52 -> Position (X, Y, Z): -12830493015.25, -12830493015.25, -13404163673.93 km
+Step 53 -> Position (X, Y, Z): -13082073780.98, -13082073780.98, -13666992883.96 km
+Step 54 -> Position (X, Y, Z): -13333654546.72, -13333654546.72, -13929822093.98 km
+Step 55 -> Position (X, Y, Z): -13585235312.45, -13585235312.45, -14192651304.01 km
+Step 56 -> Position (X, Y, Z): -13836816078.19, -13836816078.19, -14455480514.03 km
+Step 57 -> Position (X, Y, Z): -14088396843.92, -14088396843.92, -14718309724.06 km
+Step 58 -> Position (X, Y, Z): -14339977609.66, -14339977609.66, -14981138934.08 km
+Step 59 -> Position (X, Y, Z): -14591558375.39, -14591558375.39, -15243968144.10 km
+Step 60 -> Position (X, Y, Z): -14843139141.13, -14843139141.13, -15506797354.13 km
+Step 61 -> Position (X, Y, Z): -15094719906.86, -15094719906.86, -15769626564.15 km
+Step 62 -> Position (X, Y, Z): -15346300672.59, -15346300672.59, -16032455774.18 km
+Step 63 -> Position (X, Y, Z): -15597881438.33, -15597881438.33, -16295284984.20 km
+Step 64 -> Position (X, Y, Z): -15849462204.06, -15849462204.06, -16558114194.23 km
+Step 65 -> Position (X, Y, Z): -16101042969.80, -16101042969.80, -16820943404.25 km
+Step 66 -> Position (X, Y, Z): -16352623735.53, -16352623735.53, -17083772614.28 km
+Step 67 -> Position (X, Y, Z): -16604204501.27, -16604204501.27, -17346601824.30 km
+Step 68 -> Position (X, Y, Z): -16855785267.00, -16855785267.00, -17609431034.33 km
+Step 69 -> Position (X, Y, Z): -17107366032.74, -17107366032.74, -17872260244.35 km
+Step 70 -> Position (X, Y, Z): -17358946798.47, -17358946798.47, -18135089454.37 km
+Step 71 -> Position (X, Y, Z): -17610527564.20, -17610527564.20, -18397918664.40 km
+Step 72 -> Position (X, Y, Z): -17862108329.94, -17862108329.94, -18660747874.42 km
+Step 73 -> Position (X, Y, Z): -18113689095.67, -18113689095.67, -18923577084.45 km
+Step 74 -> Position (X, Y, Z): -18365269861.41, -18365269861.41, -19186406294.47 km
+Step 75 -> Position (X, Y, Z): -18616850627.14, -18616850627.14, -19449235504.50 km
+Step 76 -> Position (X, Y, Z): -18868431392.88, -18868431392.88, -19712064714.52 km
+Step 77 -> Position (X, Y, Z): -19120012158.61, -19120012158.61, -19974893924.55 km
+Step 78 -> Position (X, Y, Z): -19371592924.35, -19371592924.35, -20237723134.57 km
+Step 79 -> Position (X, Y, Z): -19623173690.08, -19623173690.08, -20500552344.60 km
+Step 80 -> Position (X, Y, Z): -19874754455.82, -19874754455.82, -20763381554.62 km
+Step 81 -> Position (X, Y, Z): -20126335221.55, -20126335221.55, -21026210764.64 km
+Step 82 -> Position (X, Y, Z): -20377915987.28, -20377915987.28, -21289039974.67 km
+Step 83 -> Position (X, Y, Z): -20629496753.02, -20629496753.02, -21551869184.69 km
+Step 84 -> Position (X, Y, Z): -20881077518.75, -20881077518.75, -21814698394.72 km
+Step 85 -> Position (X, Y, Z): -21132658284.49, -21132658284.49, -22077527604.74 km
+Step 86 -> Position (X, Y, Z): -21384239050.22, -21384239050.22, -22340356814.77 km
+Step 87 -> Position (X, Y, Z): -21635819815.96, -21635819815.96, -22603186024.79 km
+Step 88 -> Position (X, Y, Z): -21887400581.69, -21887400581.69, -22866015234.82 km
+Step 89 -> Position (X, Y, Z): -22138981347.43, -22138981347.43, -23128844444.84 km
+Step 90 -> Position (X, Y, Z): -22390562113.16, -22390562113.16, -23391673654.87 km
+Step 91 -> Position (X, Y, Z): -22642142878.89, -22642142878.89, -23654502864.89 km
+Step 92 -> Position (X, Y, Z): -22893723644.63, -22893723644.63, -23917332074.91 km
+Step 93 -> Position (X, Y, Z): -23145304410.36, -23145304410.36, -24180161284.94 km
+Step 94 -> Position (X, Y, Z): -23396885176.10, -23396885176.10, -24442990494.96 km
+Step 95 -> Position (X, Y, Z): -23648465941.83, -23648465941.83, -24705819704.99 km
+Step 96 -> Position (X, Y, Z): -23900046707.57, -23900046707.57, -24968648915.01 km
+Step 97 -> Position (X, Y, Z): -24151627473.30, -24151627473.30, -25231478125.04 km
+Step 98 -> Position (X, Y, Z): -24403208239.04, -24403208239.04, -25494307335.06 km
+Step 99 -> Position (X, Y, Z): -24654789004.77, -24654789004.77, -25757136545.09 km
+Step 100 -> Position (X, Y, Z): -24906369770.51, -24906369770.51, -26019965755.11 km
 
-real    0m0.286s
-user    0m1.000s
-sys     0m0.281s
+real    0m0.216s
+user    0m0.969s
+sys     0m0.250s
 ```
 
 And here's the json stats:
 
 ```js
 {
-    "time_stamp": 0.01,
-    "step_max": 50
+    "time_stamp": 100,
+    "step_max": 100,
+    "position": [1000, 1000, 1000],
+    "velocity": [1000, 1000, 1000],
+    "mu": 132712440018.9,
+    "Re": 6378.1,
+    "J2": 0.00108263
 }
 ```

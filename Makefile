@@ -2,9 +2,9 @@
 
 CC = gcc
 FILE = main.c
-FILEPY = code.py
+FILEPY = main.py
 BIN = binary/mathlib.so
-PYTOOLS = numpy skyfield
+PYTOOLS = numpy 
 
 # Default target builds the shared library
 all: $(BIN)

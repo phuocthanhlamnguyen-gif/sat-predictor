@@ -7,4 +7,5 @@ or to support me**, you may please stay if you want. By the way, if you really w
 contributing, please click in the link: 
 
 * To help us contribute: [Page on guide to contributing](docs/docs.md)
-* To view the lastest benckmarks [Page on the benchmarks](docs/benckmark.md)
+* To view the lastest benckmarks: [Page on the benchmarks](docs/benckmark.md)
+* Problems with the symbols: [Page on a brief guide](docs/math.md)
