@@ -1,5 +1,5 @@
 Write-Host "Building code..."
-New-Item report.sp -type file
+New-Item report.sat -type file
 mkdir -p binary
 gcc -shared -o binary/mathlib.dll main.c -lm 
 Write-Host "Done building, now need to get all the imports..."

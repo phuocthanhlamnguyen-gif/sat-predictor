@@ -10,7 +10,7 @@ PYTOOLS = numpy
 all: $(BIN)
 
 $(BIN): $(FILE)
-	touch report.sp
+	touch report.sat
 	mkdir -p binary
 	$(CC) -shared -o $(BIN) $(FILE) -lm
 
