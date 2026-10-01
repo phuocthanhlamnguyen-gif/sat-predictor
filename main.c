@@ -35,10 +35,10 @@ EXPORT void pre_orb(double pos[3], double vel[3], double mu, double dt, double R
     vel[2] += az * dt;
 }
 
-EXPORT void print_output(double pos[3], int step, const char *filename) {
+EXPORT void print_output(double pos[3], int step) {
     char buff[128];
     
-    FILE *file = fopen(filename, "a");
+    FILE *file = fopen("report.sat", "a");
     if (file == NULL) {
         perror("Failed to open file");
         return; 
